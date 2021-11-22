@@ -45,10 +45,10 @@ def translate_list(some_list, size=200):
 
     return translated_list
 
-def list_translator(list_of_ents):
+def list_translator(list_of_words):
     print('Time for translation:')
     start_time = time.time()
-    result = translate_list(list_of_ents)
+    result = translate_list(list_of_words)
     calculate_time(start_time)
 
     assert_list   = ['Текст был переведен.']
