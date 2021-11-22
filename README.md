@@ -1,6 +1,6 @@
 # list_translator
 
-The list_translator function translates word lists in unlimited volume for free.
+The list_translator function translates list of words in unlimited volume for free.
 
 It takes about 20 minutes to translate 90,000 words.
 
