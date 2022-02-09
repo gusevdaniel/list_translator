@@ -46,14 +46,14 @@ def translate_list(some_list, size):
     return translated_list
 
 def list_translator(list_of_words, size=200):
-    print('Batch size ', size)
+    print('Batch size', size)
     print('Time for translation:')
     start_time = time.time()
     result = translate_list(list_of_words, size)
     calculate_time(start_time)
 
     assert_list   = ['Текст был переведен.']
-    assert_result = translate_list(assert_list)
+    assert_result = translate_list(assert_list, 1)
     assert assert_list != assert_result, 'Translator does not work. Change your IP.'
     print(assert_result[0])
 
