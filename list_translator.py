@@ -31,7 +31,7 @@ def batches(iterable, n=1):
     for ndx in range(0, l, n):
         yield iterable[ndx:min(ndx + n, l)]
 
-def translate_list(some_list, size=200):
+def translate_list(some_list, size):
     translated_list = []
     for batch in batches(some_list, size):
         long_string = list_to_string(batch)
@@ -45,10 +45,11 @@ def translate_list(some_list, size=200):
 
     return translated_list
 
-def list_translator(list_of_words):
+def list_translator(list_of_words, size=200):
+    print('Batch size ', size)
     print('Time for translation:')
     start_time = time.time()
-    result = translate_list(list_of_words)
+    result = translate_list(list_of_words, size)
     calculate_time(start_time)
 
     assert_list   = ['Текст был переведен.']
