@@ -2,11 +2,6 @@
 
 The list_translator function translates list of words in unlimited volume for free.
 
-It takes about 20 minutes to translate 90,000 words.
-
-
-You should also know that one translation request must be less than 5000 characters.
-By default, the size of a single query is 200 words.
-
-With an average word length of 15 characters, we get:
-  15 * 200 = 3000 characters.
+For example, 
+    for list   ['Соединённые Штаты Америки', 'Хард-рок', 'Рок-музыка', 'Франция']
+    the result ['United States of America', 'Hard rock', 'Rock music', 'France']
