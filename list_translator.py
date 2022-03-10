@@ -13,16 +13,15 @@ def list_to_string(some_list):
 
 def string_to_list(some_string):
     some_list = some_string.strip('\n').split('\n')
-
     new_list = []
     for elem in some_list:
         if elem == '_empty':
-            elem = '' 
+            elem = ''
         new_list.append(elem)
     return new_list
 
 
-def split_list_by_char_len(some_list, max_len=4000):
+def split_list_by_char_len(some_list, max_len=3500):
     result = list()
     buff = list()
     char_len = 0
@@ -54,6 +53,8 @@ def translate_list(source_lang, some_list):
 
 def list_translator(source_lang, list_of_words):
     print('Start of the text translation.')
+    print('Number of words:', len(list_of_words))
+    print('Source language:', source_lang)
     result = translate_list(source_lang, list_of_words)
     assert len(list_of_words) == len(result)
 
